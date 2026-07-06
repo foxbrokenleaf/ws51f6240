@@ -146,185 +146,185 @@ sfr STPF   = 0xFE;   // 停止标志
  * ==================================================== */
 
 /* ---------- 8000H 行 ---------- */
-#define P00F   (*(volatile unsigned char *)0x8000)   // 端口0引脚功能选择
-#define P01F   (*(volatile unsigned char *)0x8001)
-#define P02F   (*(volatile unsigned char *)0x8002)
-#define P03F   (*(volatile unsigned char *)0x8003)
-#define P04F   (*(volatile unsigned char *)0x8004)
-#define P05F   (*(volatile unsigned char *)0x8005)
-#define P06F   (*(volatile unsigned char *)0x8006)
-#define P07F   (*(volatile unsigned char *)0x8007)
+#define P00F   (*(unsigned char volatile xdata *)0x8000)   // 端口0引脚功能选择
+#define P01F   (*(unsigned char volatile xdata *)0x8001)
+#define P02F   (*(unsigned char volatile xdata *)0x8002)
+#define P03F   (*(unsigned char volatile xdata *)0x8003)
+#define P04F   (*(unsigned char volatile xdata *)0x8004)
+#define P05F   (*(unsigned char volatile xdata *)0x8005)
+#define P06F   (*(unsigned char volatile xdata *)0x8006)
+#define P07F   (*(unsigned char volatile xdata *)0x8007)
 
 /* ---------- 8008H 行 ---------- */
-#define P10F   (*(volatile unsigned char *)0x8008)
-#define P11F   (*(volatile unsigned char *)0x8009)
-#define P12F   (*(volatile unsigned char *)0x800A)
-#define P13F   (*(volatile unsigned char *)0x800B)
-#define P14F   (*(volatile unsigned char *)0x800C)
-#define P15F   (*(volatile unsigned char *)0x800D)
-#define P16F   (*(volatile unsigned char *)0x800E)
-#define P17F   (*(volatile unsigned char *)0x800F)
+#define P10F   (*(unsigned char volatile xdata *)0x8008)
+#define P11F   (*(unsigned char volatile xdata *)0x8009)
+#define P12F   (*(unsigned char volatile xdata *)0x800A)
+#define P13F   (*(unsigned char volatile xdata *)0x800B)
+#define P14F   (*(unsigned char volatile xdata *)0x800C)
+#define P15F   (*(unsigned char volatile xdata *)0x800D)
+#define P16F   (*(unsigned char volatile xdata *)0x800E)
+#define P17F   (*(unsigned char volatile xdata *)0x800F)
 
 /* ---------- 8010H 行 ---------- */
-#define P20F   (*(volatile unsigned char *)0x8010)
-#define P21F   (*(volatile unsigned char *)0x8011)
+#define P20F   (*(unsigned char volatile xdata *)0x8010)
+#define P21F   (*(unsigned char volatile xdata *)0x8011)
 // 0x8012~0x8017 保留
 
 /* ---------- 8040H 行 ---------- */
-#define PWMUN   (*(volatile unsigned char *)0x8040)   // PWM单元控制
-#define PWMCLR  (*(volatile unsigned char *)0x8041)   // PWM清零
+#define PWMUN   (*(unsigned char volatile xdata *)0x8040)   // PWM单元控制
+#define PWMCLR  (*(unsigned char volatile xdata *)0x8041)   // PWM清零
 // 0x8042 保留
-#define PWMUPD  (*(volatile unsigned char *)0x8043)   // PWM更新
-#define PWMFLG0 (*(volatile unsigned char *)0x8044)   // PWM标志0
-#define PWMFLG1 (*(volatile unsigned char *)0x8045)   // PWM标志1
+#define PWMUPD  (*(unsigned char volatile xdata *)0x8043)   // PWM更新
+#define PWMFLG0 (*(unsigned char volatile xdata *)0x8044)   // PWM标志0
+#define PWMFLG1 (*(unsigned char volatile xdata *)0x8045)   // PWM标志1
 // 0x8046, 0x8047 保留
 
 /* ---------- 8048H 行 ---------- */
-#define PMEN    (*(volatile unsigned char *)0x8048)   // 测量使能
-#define PMDAT   (*(volatile unsigned char *)0x8049)   // 测量数据
-#define PMSCON  (*(volatile unsigned char *)0x804A)   // 测量控制
-#define PMSDL   (*(volatile unsigned char *)0x804B)   // 测量数据低
-#define PMSDH   (*(volatile unsigned char *)0x804C)   // 测量数据高
-#define PMSML   (*(volatile unsigned char *)0x804D)   // 测量状态低
-#define PMSMH   (*(volatile unsigned char *)0x804E)   // 测量状态高
+#define PMEN    (*(unsigned char volatile xdata *)0x8048)   // 测量使能
+#define PMDAT   (*(unsigned char volatile xdata *)0x8049)   // 测量数据
+#define PMSCON  (*(unsigned char volatile xdata *)0x804A)   // 测量控制
+#define PMSDL   (*(unsigned char volatile xdata *)0x804B)   // 测量数据低
+#define PMSDH   (*(unsigned char volatile xdata *)0x804C)   // 测量数据高
+#define PMSML   (*(unsigned char volatile xdata *)0x804D)   // 测量状态低
+#define PMSMH   (*(unsigned char volatile xdata *)0x804E)   // 测量状态高
 // 0x804F 保留
 
 /* ---------- 8050H 行（PWM0） ---------- */
-#define PWM0CFG (*(volatile unsigned char *)0x8050)
-#define PWM0PS  (*(volatile unsigned char *)0x8051)
+#define PWM0CFG (*(unsigned char volatile xdata *)0x8050)
+#define PWM0PS  (*(unsigned char volatile xdata *)0x8051)
 // 0x8052, 0x8053 保留
-#define PWM0DUTL (*(volatile unsigned char *)0x8054)
-#define PWM0DUTH (*(volatile unsigned char *)0x8055)
-#define PWM0DIVL (*(volatile unsigned char *)0x8056)
-#define PWM0DIVH (*(volatile unsigned char *)0x8057)
+#define PWM0DUTL (*(unsigned char volatile xdata *)0x8054)
+#define PWM0DUTH (*(unsigned char volatile xdata *)0x8055)
+#define PWM0DIVL (*(unsigned char volatile xdata *)0x8056)
+#define PWM0DIVH (*(unsigned char volatile xdata *)0x8057)
 
 /* ---------- 8058H 行（PWM1） ---------- */
-#define PWM1CFG (*(volatile unsigned char *)0x8058)
-#define PWM1PS  (*(volatile unsigned char *)0x8059)
+#define PWM1CFG (*(unsigned char volatile xdata *)0x8058)
+#define PWM1PS  (*(unsigned char volatile xdata *)0x8059)
 // 0x805A, 0x805B 保留
-#define PWM1DUTL (*(volatile unsigned char *)0x805C)
-#define PWM1DUTH (*(volatile unsigned char *)0x805D)
-#define PWM1DIVL (*(volatile unsigned char *)0x805E)
-#define PWM1DIVH (*(volatile unsigned char *)0x805F)
+#define PWM1DUTL (*(unsigned char volatile xdata *)0x805C)
+#define PWM1DUTH (*(unsigned char volatile xdata *)0x805D)
+#define PWM1DIVL (*(unsigned char volatile xdata *)0x805E)
+#define PWM1DIVH (*(unsigned char volatile xdata *)0x805F)
 
 /* ---------- 8060H 行（PWM2） ---------- */
-#define PWM2CFG (*(volatile unsigned char *)0x8060)
-#define PWM2PS  (*(volatile unsigned char *)0x8061)
+#define PWM2CFG (*(unsigned char volatile xdata *)0x8060)
+#define PWM2PS  (*(unsigned char volatile xdata *)0x8061)
 // 0x8062, 0x8063 保留
-#define PWM2DUTL (*(volatile unsigned char *)0x8064)
-#define PWM2DUTH (*(volatile unsigned char *)0x8065)
-#define PWM2DIVL (*(volatile unsigned char *)0x8066)
-#define PWM2DIVH (*(volatile unsigned char *)0x8067)
+#define PWM2DUTL (*(unsigned char volatile xdata *)0x8064)
+#define PWM2DUTH (*(unsigned char volatile xdata *)0x8065)
+#define PWM2DIVL (*(unsigned char volatile xdata *)0x8066)
+#define PWM2DIVH (*(unsigned char volatile xdata *)0x8067)
 
 /* ---------- 8068H 行（PWM3） ---------- */
-#define PWM3CFG (*(volatile unsigned char *)0x8068)
-#define PWM3PS  (*(volatile unsigned char *)0x8069)
+#define PWM3CFG (*(unsigned char volatile xdata *)0x8068)
+#define PWM3PS  (*(unsigned char volatile xdata *)0x8069)
 // 0x806A, 0x806B 保留
-#define PWM3DUTL (*(volatile unsigned char *)0x806C)
-#define PWM3DUTH (*(volatile unsigned char *)0x806D)
-#define PWM3DIVL (*(volatile unsigned char *)0x806E)
-#define PWM3DIVH (*(volatile unsigned char *)0x806F)
+#define PWM3DUTL (*(unsigned char volatile xdata *)0x806C)
+#define PWM3DUTH (*(unsigned char volatile xdata *)0x806D)
+#define PWM3DIVL (*(unsigned char volatile xdata *)0x806E)
+#define PWM3DIVH (*(unsigned char volatile xdata *)0x806F)
 
 /* ---------- 8070H 行（PWM4） ---------- */
-#define PWM4CFG (*(volatile unsigned char *)0x8070)
-#define PWM4PS  (*(volatile unsigned char *)0x8071)
+#define PWM4CFG (*(unsigned char volatile xdata *)0x8070)
+#define PWM4PS  (*(unsigned char volatile xdata *)0x8071)
 // 0x8072, 0x8073 保留
-#define PWM4DUTL (*(volatile unsigned char *)0x8074)
-#define PWM4DUTH (*(volatile unsigned char *)0x8075)
-#define PWM4DIVL (*(volatile unsigned char *)0x8076)
-#define PWM4DIVH (*(volatile unsigned char *)0x8077)
+#define PWM4DUTL (*(unsigned char volatile xdata *)0x8074)
+#define PWM4DUTH (*(unsigned char volatile xdata *)0x8075)
+#define PWM4DIVL (*(unsigned char volatile xdata *)0x8076)
+#define PWM4DIVH (*(unsigned char volatile xdata *)0x8077)
 
 /* ---------- 8078H 行（PWM5） ---------- */
-#define PWM5CFG (*(volatile unsigned char *)0x8078)
-#define PWM5PS  (*(volatile unsigned char *)0x8079)
+#define PWM5CFG (*(unsigned char volatile xdata *)0x8078)
+#define PWM5PS  (*(unsigned char volatile xdata *)0x8079)
 // 0x807A, 0x807B 保留
-#define PWM5DUTL (*(volatile unsigned char *)0x807C)
-#define PWM5DUTH (*(volatile unsigned char *)0x807D)
-#define PWM5DIVL (*(volatile unsigned char *)0x807E)
-#define PWM5DIVH (*(volatile unsigned char *)0x807F)
+#define PWM5DUTL (*(unsigned char volatile xdata *)0x807C)
+#define PWM5DUTH (*(unsigned char volatile xdata *)0x807D)
+#define PWM5DIVL (*(unsigned char volatile xdata *)0x807E)
+#define PWM5DIVH (*(unsigned char volatile xdata *)0x807F)
 
 /* ---------- 8080H 行（PWM6） ---------- */
-#define PWM6CFG (*(volatile unsigned char *)0x8080)
-#define PWM6PS  (*(volatile unsigned char *)0x8081)
+#define PWM6CFG (*(unsigned char volatile xdata *)0x8080)
+#define PWM6PS  (*(unsigned char volatile xdata *)0x8081)
 // 0x8082, 0x8083 保留
-#define PWM6DUTL (*(volatile unsigned char *)0x8084)
-#define PWM6DUTH (*(volatile unsigned char *)0x8085)
-#define PWM6DIVL (*(volatile unsigned char *)0x8086)
-#define PWM6DIVH (*(volatile unsigned char *)0x8087)
+#define PWM6DUTL (*(unsigned char volatile xdata *)0x8084)
+#define PWM6DUTH (*(unsigned char volatile xdata *)0x8085)
+#define PWM6DIVL (*(unsigned char volatile xdata *)0x8086)
+#define PWM6DIVH (*(unsigned char volatile xdata *)0x8087)
 
 /* ---------- 8088H 行（PWM7） ---------- */
-#define PWM7CFG (*(volatile unsigned char *)0x8088)
-#define PWM7PS  (*(volatile unsigned char *)0x8089)
+#define PWM7CFG (*(unsigned char volatile xdata *)0x8088)
+#define PWM7PS  (*(unsigned char volatile xdata *)0x8089)
 // 0x808A, 0x808B 保留
-#define PWM7DUTL (*(volatile unsigned char *)0x808C)
-#define PWM7DUTH (*(volatile unsigned char *)0x808D)
-#define PWM7DIVL (*(volatile unsigned char *)0x808E)
-#define PWM7DIVH (*(volatile unsigned char *)0x808F)
+#define PWM7DUTL (*(unsigned char volatile xdata *)0x808C)
+#define PWM7DUTH (*(unsigned char volatile xdata *)0x808D)
+#define PWM7DIVL (*(unsigned char volatile xdata *)0x808E)
+#define PWM7DIVH (*(unsigned char volatile xdata *)0x808F)
 
 /* ---------- 80D0H 行 ---------- */
-#define LEDCFG  (*(volatile unsigned char *)0x80D0)   // LED配置
+#define LEDCFG  (*(unsigned char volatile xdata *)0x80D0)   // LED配置
 // 0x80D1 保留
-#define LED0D0  (*(volatile unsigned char *)0x80D2)   // LED0数据0
-#define LED0D1  (*(volatile unsigned char *)0x80D3)   // LED0数据1
-#define LED0D2  (*(volatile unsigned char *)0x80D4)   // LED0数据2
+#define LED0D0  (*(unsigned char volatile xdata *)0x80D2)   // LED0数据0
+#define LED0D1  (*(unsigned char volatile xdata *)0x80D3)   // LED0数据1
+#define LED0D2  (*(unsigned char volatile xdata *)0x80D4)   // LED0数据2
 // 0x80D5~0x80D7 保留
 
 /* ---------- 80D8H 行 ---------- */
 // 0x80D8, 0x80D9 保留
-#define LED1D0  (*(volatile unsigned char *)0x80DA)   // LED1数据0
-#define LED1D1  (*(volatile unsigned char *)0x80DB)   // LED1数据1
-#define LED1D2  (*(volatile unsigned char *)0x80DC)   // LED1数据2
+#define LED1D0  (*(unsigned char volatile xdata *)0x80DA)   // LED1数据0
+#define LED1D1  (*(unsigned char volatile xdata *)0x80DB)   // LED1数据1
+#define LED1D2  (*(unsigned char volatile xdata *)0x80DC)   // LED1数据2
 // 0x80DD~0x80DF 保留
 
 /* ---------- 80E0H 行 ---------- */
-#define FBCON   (*(volatile unsigned char *)0x80E0)   // 反馈控制
-#define FBDAT   (*(volatile unsigned char *)0x80E1)   // 反馈数据
-#define FBFLG   (*(volatile unsigned char *)0x80E2)   // 反馈标志
+#define FBCON   (*(unsigned char volatile xdata *)0x80E0)   // 反馈控制
+#define FBDAT   (*(unsigned char volatile xdata *)0x80E1)   // 反馈数据
+#define FBFLG   (*(unsigned char volatile xdata *)0x80E2)   // 反馈标志
 // 0x80E3~0x80E7 保留
 
 /* ---------- 80E8H 行 ---------- */
-#define PIMOD   (*(volatile unsigned char *)0x80E8)   // 引脚中断模式
-#define POIMSK  (*(volatile unsigned char *)0x80E9)   // P0中断屏蔽
-#define P1IMSK  (*(volatile unsigned char *)0x80EA)   // P1中断屏蔽
-#define P2IMSK  (*(volatile unsigned char *)0x80EB)   // P2中断屏蔽
+#define PIMOD   (*(unsigned char volatile xdata *)0x80E8)   // 引脚中断模式
+#define POIMSK  (*(unsigned char volatile xdata *)0x80E9)   // P0中断屏蔽
+#define P1IMSK  (*(unsigned char volatile xdata *)0x80EA)   // P1中断屏蔽
+#define P2IMSK  (*(unsigned char volatile xdata *)0x80EB)   // P2中断屏蔽
 // 0x80EC~0x80EF 保留
 
 /* ---------- 80F0H 行 ---------- */
-#define BZCON   (*(volatile unsigned char *)0x80F0)   // 蜂鸣器控制
-#define BZPSC   (*(volatile unsigned char *)0x80F1)   // 蜂鸣器预分频
-#define BZDUT   (*(volatile unsigned char *)0x80F2)   // 蜂鸣器占空比
-#define BDDIV   (*(volatile unsigned char *)0x80F3)   // 蜂鸣器分频
+#define BZCON   (*(unsigned char volatile xdata *)0x80F0)   // 蜂鸣器控制
+#define BZPSC   (*(unsigned char volatile xdata *)0x80F1)   // 蜂鸣器预分频
+#define BZDUT   (*(unsigned char volatile xdata *)0x80F2)   // 蜂鸣器占空比
+#define BDDIV   (*(unsigned char volatile xdata *)0x80F3)   // 蜂鸣器分频
 // 0x80F4~0x80F7 保留
 
 /* ---------- 82B0H 行 ---------- */
-#define ACBCON  (*(volatile unsigned char *)0x82B0)   // ACB控制
+#define ACBCON  (*(unsigned char volatile xdata *)0x82B0)   // ACB控制
 // 0x82B1 保留
-#define AKDAT   (*(volatile unsigned char *)0x82B2)   // AK数据
+#define AKDAT   (*(unsigned char volatile xdata *)0x82B2)   // AK数据
 // 0x82B3 保留
-#define AMDAT   (*(volatile unsigned char *)0x82B4)   // AM数据
+#define AMDAT   (*(unsigned char volatile xdata *)0x82B4)   // AM数据
 // 0x82B5~0x82B7 保留
 
 /* ---------- 8300H 行 ---------- */
-#define MECON   (*(volatile unsigned char *)0x8300)   // ME控制
-#define FSCMD   (*(volatile unsigned char *)0x8301)   // FS命令
-#define BTMASK  (*(volatile unsigned char *)0x8302)   // BT掩码
-#define FSDAT   (*(volatile unsigned char *)0x8303)   // FS数据
-#define FSFLG   (*(volatile unsigned char *)0x8304)   // FS标志
-#define FSMSK   (*(volatile unsigned char *)0x8305)   // FS掩码
-#define FSADRL  (*(volatile unsigned char *)0x8306)   // FS地址低
-#define FSADRH  (*(volatile unsigned char *)0x8307)   // FS地址高
+#define MECON   (*(unsigned char volatile xdata *)0x8300)   // ME控制
+#define FSCMD   (*(unsigned char volatile xdata *)0x8301)   // FS命令
+#define BTMASK  (*(unsigned char volatile xdata *)0x8302)   // BT掩码
+#define FSDAT   (*(unsigned char volatile xdata *)0x8303)   // FS数据
+#define FSFLG   (*(unsigned char volatile xdata *)0x8304)   // FS标志
+#define FSMSK   (*(unsigned char volatile xdata *)0x8305)   // FS掩码
+#define FSADRL  (*(unsigned char volatile xdata *)0x8306)   // FS地址低
+#define FSADRH  (*(unsigned char volatile xdata *)0x8307)   // FS地址高
 
 /* ---------- 8308H 行 ---------- */
-#define CKSUML  (*(volatile unsigned char *)0x8308)   // 校验和低
-#define CKSUMH  (*(volatile unsigned char *)0x8309)   // 校验和高
-#define IDCODE0 (*(volatile unsigned char *)0x830A)   // ID码0
-#define IDCODE1 (*(volatile unsigned char *)0x830B)   // ID码1
-#define IDCODE2 (*(volatile unsigned char *)0x830C)   // ID码2
+#define CKSUML  (*(unsigned char volatile xdata *)0x8308)   // 校验和低
+#define CKSUMH  (*(unsigned char volatile xdata *)0x8309)   // 校验和高
+#define IDCODE0 (*(unsigned char volatile xdata *)0x830A)   // ID码0
+#define IDCODE1 (*(unsigned char volatile xdata *)0x830B)   // ID码1
+#define IDCODE2 (*(unsigned char volatile xdata *)0x830C)   // ID码2
 // 0x830D~0x830F 保留
 
 /* ---------- 8400H 行 ---------- */
 // 0x8400~0x8406 保留
-#define SPMAX   (*(volatile unsigned char *)0x8407)   // 堆栈最大地址
+#define SPMAX   (*(unsigned char volatile xdata *)0x8407)   // 堆栈最大地址
 
 /*------------------------------------------------
  * 使用说明：
